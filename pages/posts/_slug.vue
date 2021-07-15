@@ -35,8 +35,8 @@
 <script>
 export default {
   async asyncData({ params }) {
+    console.log(params);
     let post = await import(`~/blog/${params.slug}.md`);
-
     return {
       meta: post.attributes,
       html: post.html,

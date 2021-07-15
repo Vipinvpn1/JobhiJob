@@ -26,6 +26,7 @@ export default {
     Posts
   },
   async asyncData() {
+    
     return postsHelper.methods.getPosts();
   }
 };
