@@ -35,6 +35,7 @@ export default {
           .pop()
           .split(".")[0]
       }`;
+      
       return link;
     },
 
@@ -81,6 +82,7 @@ export default {
   .coverimage {
     display: inline-block;
     text-align: left;
+      object-fit: cover;
 
     img {
       border-radius: 5px;

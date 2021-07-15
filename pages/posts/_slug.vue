@@ -10,7 +10,7 @@
       <div class="container">
         <div class="head">
           <div class="heading">{{ meta.title }}</div>
-          <div class="created">{{ meta.created }} - {{ meta.author }}</div>
+          <div class="created">{{ meta.created }} </div>
           <div class="updated">{{ meta.updated }}</div>
         </div>
 
@@ -19,13 +19,9 @@
         </div>
 
         <div class="text-center">
-          <div class="tagList">
-            <p>
-              <span v-for="(voter, i) in meta.tags" :key="i" class="tags">{{
-                voter
-              }}</span>
-            </p>
-          </div>
+
+
+  <a class="btn apply" :href="link">Apply NOW</a>
         </div>
 
         <div class="text-center">
@@ -45,6 +41,7 @@ export default {
       meta: post.attributes,
       html: post.html,
       singlePostComponent: post.component,
+      link: post.attributes.link,
       splash:
         post.attributes && post.attributes.cover && post.attributes.cover.image
           ? `background-image: url(images/blog/${post.attributes.cover.image});`
@@ -236,6 +233,16 @@ export default {
     &:hover {
       background-color: #44494f;
     }
+  }
+  .apply{
+    color:white;
+    background: orange;
+    border:1px solid;
+    border-radius:30%;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+
   }
 }
 </style>

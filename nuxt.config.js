@@ -57,7 +57,11 @@ export default {
      */
     modules: [
         '@nuxtjs/sitemap',
+        '@nuxtjs/google-adsense',
     ],
+    'google-adsense': {
+      id: 'ca-pub-8747021727663757'
+    },
     /*
      ** Build configuration
      */
